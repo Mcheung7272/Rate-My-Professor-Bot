@@ -17,7 +17,7 @@ bot.remove_command('help')
 async def search(ctx, *, args):
     parts = searchFull(args)
     if "error" in parts:
-        await ctx.channel.send('Error! ' + args + ' not found. Make sure you type the name correctly! If you need help, use !help {}'.format(ctx.message.author.mention))
+        await ctx.channel.send('Error! ' + args + ' not found. Make sure you type the name correctly! If you need help, use ?help {}'.format(ctx.message.author.mention))
     else:
         embedVar = discord.Embed(title="RateMyProfessor Results", description="Professor " + args, color=0x00ff00)
         embedVar.add_field(name="School", value =parts[2], inline=False)

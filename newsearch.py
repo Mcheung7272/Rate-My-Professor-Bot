@@ -13,15 +13,13 @@ class University():
             self.found = None
             if(len(parts)==1):
                 one = parts[0]
-                names = self.lookLast(one)
-                if(names is False):
-                    names = self.lookFirst(one)
-                    if(names is False):
-                        return "error"
-                    else:
-                        return names
+                namesF = self.lookLast(one)
+                namesL = self.lookFirst(one)
+                namesF.extend(namesL)
+                if(len(namesF)==0):
+                    return "error"
                 else:
-                    return names
+                    return namesF
             firstN = parts[0]
             lastN = parts[1]
 
@@ -44,7 +42,7 @@ class University():
                     print(" Look --- %s seconds ---" % (time.time() - start_time))
                     return i
             print("Look Function--- %s seconds ---" % (time.time() - start_time))
-            return "Error" 
+            return False 
 
         def lookLast(self, name):
             firstNames = []
@@ -54,10 +52,7 @@ class University():
             for i in range(0, len(self.temp_list)):
                 if(name == (self.temp_list[i]['tLname'])):
                     firstNames.append(self.temp_list[i]['tFname'] + " " + self.temp_list[i]['tLname'] +": " + self.temp_list[i]['tDept'])
-            if(len(firstNames)==0):
-                return False
-            else:
-                return firstNames
+            return firstNames
 
         def lookFirst(self, name):
             lastNames = []
@@ -67,7 +62,4 @@ class University():
             for i in range(0,len(self.temp_list)):
                 if(name == (self.temp_list[i]['tFname'])):
                     lastNames.append(self.temp_list[i]['tFname'] + " " + self.temp_list[i]['tLname'] + ": " + self.temp_list[i]['tDept'])
-            if(len(lastNames)==0):
-                return False
-            else:
-                return lastNames
+            return lastNames
