@@ -44,13 +44,13 @@ async def ns(ctx,name):
         await ctx.channel.send(embed=embedVar)
 
 @bot.command()
-async def help(ctx):
+async def helpme(ctx):
     values = " "
     embedVar = discord.Embed(title="Commands: ", description="Commands and Usage", color=0x00ff00)
-    embedVar.add_field(name="!search", value="<First Name> *space* <Last Name>", inline=True)
+    embedVar.add_field(name="?search", value="<First Name> *space* <Last Name>", inline=True)
     embedVar.add_field(name="Use", value="If you know the name of the professor.", inline=True)
     embedVar.add_field(name=chr(173), value=chr(173), inline=False)
-    embedVar.add_field(name="!ns", value="<First or Last Name>", inline=True)
+    embedVar.add_field(name="?ns", value="<First or Last Name>", inline=True)
     embedVar.add_field(name="Use", value="If you only know the first or last name", inline=True)
     await ctx.channel.send(embed=embedVar)
 
