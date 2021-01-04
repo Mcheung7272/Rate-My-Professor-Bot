@@ -11,21 +11,21 @@ def searchFull(name):
     UA = University(YOUR SCHOOL ID)
 ```
 Aside from that, the commands are:
-##### ?search
+## ?search
 This takes in a First and Last name, passes it to the searchFull function and outputs information from RateMyProfessor about the person searched. 
 ```
 ?search Eric Woods
 ```
 ![out for ?search](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/exOutputRMP.png?raw=true "?search Output")
 
-##### ?ns
+## ?ns
 This command is used if the user only remembers the first or last name of the professor. 
 ```
 ?ns eric
 ```
 ![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/exOutputRMPns.png?raw=true "?ns Output")
 
-##### ?compare
+## ?compare
 This is a comparision feature, used to compare two professor's reviews side by side.
 ```
 ?compare "Eric Woods" "Eric Fowler"
