@@ -38,10 +38,32 @@ async def ping(ctx):
 async def ns(ctx,name):
     results = nss(name.capitalize())
     if("error" in results):
-        await ctx.channel.send("No results or incorrect input! If you need help, use !help")
+        await ctx.channel.send("No results or incorrect input! If you need help, use ?help")
     else:
         embedVar = discord.Embed(title="Search Results for " + name, description = results, color = 0x00ff00)
         await ctx.channel.send(embed=embedVar)
+
+@bot.command()
+async def compare(ctx, name, otherName):
+    resultsName = searchFull(name)
+    resultsOtherName = searchFull(otherName)
+    embedVar = discord.Embed(title = "RateMyProfessor Comparision", color = 0x00ff00)
+    embedVar.add_field(name="Professor", value =name, inline=True)
+    embedVar.add_field(name="Professor", value =otherName, inline=True)
+    embedVar.add_field(name="\u200b", value ="\u200b", inline=False)
+    embedVar.add_field(name="Department", value=resultsName[0], inline=True)
+    embedVar.add_field(name="Department", value=resultsOtherName[0], inline=True)
+    embedVar.add_field(name="\u200b", value ="\u200b", inline=False)
+    embedVar.add_field(name="Class Rating", value=resultsName[8], inline=True)
+    embedVar.add_field(name="Class Rating", value=resultsOtherName[8], inline=True)
+    embedVar.add_field(name="\u200b", value ="\u200b", inline=False)
+    embedVar.add_field(name="Total Reviews", value=resultsName[7], inline=True)
+    embedVar.add_field(name="Total Reviews", value=resultsOtherName[7], inline=True)
+    embedVar.add_field(name="\u200b", value ="\u200b", inline=False)
+    embedVar.add_field(name="Overall Rating", value=resultsName[11], inline=True)
+    embedVar.add_field(name="Overall Rating", value=resultsOtherName[11], inline=True)
+    embedVar.add_field(name="Link", value = "Rate My Professor Link for " + name + " ----> [Click here](https://www.ratemyprofessors.com/ShowRatings.jsp?tid=" + str(resultsName[6])+ "&showMyProfs=true)" + "\nRate My Professor Link for " + otherName + " ----> [Click here](https://www.ratemyprofessors.com/ShowRatings.jsp?tid=" + str(resultsOtherName[6])+ "&showMyProfs=true)", inline=False)
+    await ctx.channel.send(embed=embedVar)
 
 @bot.command()
 async def helpme(ctx):
@@ -52,6 +74,9 @@ async def helpme(ctx):
     embedVar.add_field(name=chr(173), value=chr(173), inline=False)
     embedVar.add_field(name="?ns", value="<First or Last Name>", inline=True)
     embedVar.add_field(name="Use", value="If you only know the first or last name", inline=True)
+    embedVar.add_field(name=chr(173), value=chr(173), inline=False)
+    embedVar.add_field(name="?compare", value="<Full Name> *space* <Full Name>", inline=True)
+    embedVar.add_field(name="Use", value="Compare two professors", inline=True)
     await ctx.channel.send(embed=embedVar)
 
 bot.run(TOKEN)
