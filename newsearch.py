@@ -1,9 +1,6 @@
 import requests
 import json
-import time
-start_time = time.time()
 
-print("--- %s seconds ---" % (time.time() - start_time))
 class University():
         def __init__(self,schoolID):
             self.Uni = schoolID
@@ -28,10 +25,8 @@ class University():
             self.temp_list = temp_jsonpage['professors']
             self.found = self.lookFull(name)
             if("Error" in str(self.found)):
-                print(" Searching --- %s seconds ---" % (time.time() - start_time))
                 return "Error not found!"
             else:
-                print("Searching --- %s seconds ---" % (time.time() - start_time))
                 return self.temp_list[self.found]
 
         
@@ -39,9 +34,7 @@ class University():
             for i in range(0, len(self.temp_list)):
                 print(self.temp_list[i]['tFname'] + " " + self.temp_list[i]['tLname'])
                 if (name == (self.temp_list[i]['tFname'] + " " + self.temp_list[i]['tLname'])):
-                    print(" Look --- %s seconds ---" % (time.time() - start_time))
                     return i
-            print("Look Function--- %s seconds ---" % (time.time() - start_time))
             return False 
 
         def lookLast(self, name):
