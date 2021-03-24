@@ -26,5 +26,3 @@ def combo(names):
     for i in range(len(names)):
         total += names[i] +"\n"
     return total
-
-#print(nss("Morgan"))
