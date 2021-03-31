@@ -23,14 +23,14 @@ This command is used if the user only remembers the first or last name of the pr
 ```
 ?ns eric
 ```
-![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPns.png"?ns Output")
+![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPns.png "?search Output")
 
 ## ?compare
 This is a comparision feature, used to compare two professor's reviews side by side.
 ```
 ?compare "Eric Woods" "Eric Fowler"
 ```
-![out for ?compare](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPcompare.png"?ns Output")
+![out for ?compare](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPcompare.png "?ns Output")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
