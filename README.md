@@ -16,21 +16,21 @@ This takes in a First and Last name, passes it to the searchFull function and ou
 ```
 ?search Eric Woods
 ```
-![out for ?search](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/exOutputRMP.png?raw=true "?search Output")
+![out for ?search](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMP.png?raw=true "?search Output")
 
 ## ?ns
 This command is used if the user only remembers the first or last name of the professor. 
 ```
 ?ns eric
 ```
-![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/exOutputRMPns.png?raw=true "?ns Output")
+![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPns.png"?ns Output")
 
 ## ?compare
 This is a comparision feature, used to compare two professor's reviews side by side.
 ```
 ?compare "Eric Woods" "Eric Fowler"
 ```
-![out for ?ns](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/exOutputRMPcompare.png?raw=true "?ns Output")
+![out for ?compare](https://github.com/Mcheung7272/Rate-My-Professor-Bot/blob/master/ImagePreviews/exOutputRMPcompare.png"?ns Output")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
