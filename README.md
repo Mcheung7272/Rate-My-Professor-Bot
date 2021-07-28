@@ -1,8 +1,8 @@
 # Rate My Professor Bot
- Takes in first, last, or both names of the Professor, scrapes json pages and outputs information.
+ Takes in first, last, or both names of the Professor, calls RMP API and outputs information.
 
 ## Usage
-I placed all the functions used for retreiving the json pages and scraping it in a class, making it easier for other students in different universities to use this bot if necessary.  This can be used for ANY school on Rate My Professor. Simply change the current school ID(sid) to the school you want to scrape when creating the class. 
+I placed all the functions used for calling the API and parsing it in a class, making it easier for other students in different universities to use this bot if necessary.  This can be used for ANY school on Rate My Professor. Simply change the current school ID(sid) to the school you want to scrape when creating the class. 
 ```python
 from newsearch import University
 
